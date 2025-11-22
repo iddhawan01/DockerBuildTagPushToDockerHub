@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh '''
                 echo "Building Docker image..."
-                cd 04-docker-push
+                cd docker-push
                 docker build -t my-first-image .
                 '''
             }
@@ -56,7 +56,7 @@ pipeline {
 
     post {
         success {
-            echo "Use Case 4: Docker image pushed successfully to Docker Hub!"
+            echo "Use Case: Docker image pushed successfully to Docker Hub!"
         }
         failure {
             echo "Pipeline failed — check error above."
